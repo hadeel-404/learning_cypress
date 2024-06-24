@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Page</title>
+    <style>
+        #hidden-element { display: none; }
+        .changed-class { border: 1px solid red; }
+        .form-group { /* ensuring the form class exists for testing */ }
+    </style>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            var email = document.querySelector('input[name="email"]').value;
+            var pass = document.querySelector('input[name="pass"]').value;
+            var errorBox = document.getElementById('error_box');
+            if (email === 'wrong-email@example.com' || pass === 'wrong-password') {
+                errorBox.style.display = 'block';
+            } else {
+                errorBox.style.display = 'none';
+                setTimeout(function() {
+                    window.location.href = 'http://127.0.0.1:8080/home.html'; // تأكد من وجود هذه الصفحة
+                }, 1000); // تأخير لمدة ثانية واحدة قبل التحميل
+            }
+        }
+
+        function triggerChangeEvent() {
+            var emailField = document.querySelector('input[name="email"]');
+            emailField.classList.add('changed-class');
+        }
+    </script>
+</head>
+<body>
+    <form class="form-group" onsubmit="handleSubmit(event)">
+        <input type="email" name="email" placeholder="Enter your email">
+        <input type="password" name="pass" placeholder="Enter your password">
+        <button type="submit" name="login">Login</button>
+    </form>
+    <div id="error_box" style="display: none;">The email or phone number you’ve entered doesn’t match any account.</div>
+    <input type="checkbox">
+    <input type="radio" name="option">
+    <select>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+    </select>
+    <div id="footer">Footer</div>
+    <ul>
+        <li class="active">First Item</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Last Item</li>
+    </ul>
+    <div id="hidden-element">This is hidden</div>
+    <button onclick="triggerChangeEvent()">Trigger Change</button>
+</body>
+</html>
