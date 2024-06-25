@@ -9,7 +9,7 @@ This repository contains a Cypress testing project for a simple web application.
   - `fixtures/`: Test data
   - `support/`: Custom commands and support files
 - `home.html`: Home page for the application
-- `test-page-updated.html`: Main test page
+- `testPage.html`: Main test page
 
 ## Prerequisites
 
@@ -22,14 +22,14 @@ This repository contains a Cypress testing project for a simple web application.
    ```bash
    git clone https://github.com/username/repository.git
    cd repository
-1.Install the dependencies:
-npm install
-Running Tests
-To open the Cypress Test Runner, run:
-npx cypress open
-To run the tests in headless mode, run:
-npx cypress run
-Project SetupRun a local server to serve the HTML files:
-npx http-server
-Ensure the server is running at http://127.0.0.1:8080.
-LicenseThis project is licensed under the MIT License.
+- Install the dependencies:
+- npm install
+- Running Tests
+ - To open the Cypress Test Runner, run:
+- npx cypress open
+- To run the tests in headless mode, run:
+- npx cypress run
+- Project SetupRun a local server to serve the HTML files:
+- npx http-server
+- Ensure the server is running at http://127.0.0.1:8080.
+- LicenseThis project is licensed under the MIT License.
