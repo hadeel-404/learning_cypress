@@ -16,5 +16,5 @@ cypress/videos/
 .env
 
 # Misc
-.DS_Store
+
 Thumbs.db
