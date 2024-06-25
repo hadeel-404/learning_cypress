@@ -1,4 +1,4 @@
-# My Cypress Testing Project
+# My Cypress Testing Project_1
 
 This repository contains a Cypress testing project for a simple web application. It includes various test cases for form validation, element interactions, and navigation.
 
